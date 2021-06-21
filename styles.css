@@ -47,7 +47,7 @@ body{
 }
 
 header{
-	background: url('../web_golden/img/header-back.jpg') no-repeat center top / cover;
+	background: url('img/header-back.jpg') no-repeat center top / cover;
 	padding: 20px 0 160px 0;
 }
 
