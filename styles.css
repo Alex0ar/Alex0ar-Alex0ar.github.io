@@ -47,7 +47,7 @@ body{
 }
 
 header{
-	background: url('header-back.jpg') no-repeat center top / cover;
+	background: url('img/header-back.jpg') no-repeat center top / cover;
 	padding: 20px 0 160px 0;
 }
 
@@ -98,48 +98,82 @@ nav img{
 	justify-content: space-between;
 }
 
-.menu_list li a{
+
+.menu_button{
 	position: relative;
+	display: inline-block;
 	text-transform: uppercase;
 	color: #fff;
 	font-size: 14px;
 	font-weight: 520;
-	transition-duration: 0.5s;
 	padding: 7px;
-}
-
-.menu_list li a:hover{
-	color: #FED233;
-}
-
-.menu_list li a:before{
-	content: '';
-	bottom: 0;
-	left: 0;
-	position: absolute;
-	width: 0%;
-	height: 2px;
-	background-color: #FED233;
+	overflow: hidden;
 	transition: 0.2s;
 }
 
-.menu_list li a:hover:before{
+.menu_button:hover{
+	box-shadow: 0 0 10px #ff6a00, 0 0 13px #ff6a00;
+	background-color: #ff6a00;
+	transition-delay: .4s;
+}
+
+.menu_button__line{
+	position: absolute;
+	display: block;
+}
+
+.menu_button__line--top{
+	top: 0;
+	left: -100%;
 	width: 100%;
+	height: 2px;
+	background: linear-gradient(90deg, transparent, #ff6a00);
 }
 
-.menu_list li a:after{
-	content: '';
-	left: 0;
-	bottom: 0;
-	position: absolute;
+.menu_button:hover .menu_button__line--top{
+	left: 100%;
+	transition: .5s;
+	transition-delay: .2s;
+}
+
+.menu_button__line--right{
+	right: 0;
+	top: -100%;
 	width: 2px;
-	height: 0%;
-	background-color: #FED233;
-	transition: 0.2s;
+	height: 100%;
+	background: linear-gradient(180deg, transparent, #ff6a00);
 }
 
-.menu_list li a:hover:after{
+.menu_button:hover .menu_button__line--right{
+	top: 100%;
+	transition: .5s;
+}
+
+.menu_button__line--bottom{
+	bottom: 0;
+	right: -100%;
+	width: 100%;
+	height: 2px;
+	background: linear-gradient(270deg, transparent, #ff6a00);
+}
+
+.menu_button:hover .menu_button__line--bottom{
+	right: 100%;
+	transition: .5s;
+	transition-delay: .2s;
+}
+
+.menu_button__line--left{
+	left: 0;
+	bottom: -100%;
+	width: 2px;
 	height: 100%;
+	background: linear-gradient(0deg, transparent, #ff6a00);
+}
+
+.menu_button:hover .menu_button__line--left{
+	bottom: 100%;
+	transition: 0.5s;
 }
 
 h1{
@@ -182,9 +216,9 @@ h1{
 
 .button_header:hover{
 	opacity: 0.9;
-	background: linear-gradient(190deg, #e73c7e , #fd7019 , #fed136);
+	background: linear-gradient(45deg, #fed136 , #fd7019 , #e73c7e);
 	background-size: 400% 400%;
-	animation: gradient 5s ease infinite;
+	animation: gradient 5s ease infinite alternate;
 	box-shadow: 0px 0px 25px 5px rgba(255,31,31,0.83), 0px 0px 15px 5px rgba(255,31,31,0.83);
 }
 
@@ -268,6 +302,10 @@ h1{
 .sec2_content{
 	display: flex;
 	justify-content: space-between;
+}
+
+.sec2_content img{
+	box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 .section-3{
